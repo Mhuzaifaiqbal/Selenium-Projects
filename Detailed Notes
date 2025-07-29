@@ -1,0 +1,120 @@
+Companies typically design and maintain hundreds (or even thousands) of 
+test cases. These test cases are based on detailed analysis of the software’s 
+features, user stories, and business requirements. Whether it’s a website,
+app, or internal system, each functionality is broken down and tested through
+one or more specific test cases. For example, for a login page alone, they 
+might create cases for valid credentials, invalid passwords, empty fields, 
+UI visibility, and more.
+
+Manual Test Cases Are Written by QA Teams
+Initially, most test cases are created and executed manually by QA 
+(Quality Assurance) engineers. These professionals carefully write each step 
+required to test a feature, along with expected results. Manual test cases are
+useful for new features, exploratory testing, usability checks, and when 
+automation is not practical due to frequent UI changes. Manual execution is
+slower but allows testers to observe issues from a human perspective.
+
+Repetitive Test Cases Are Automated
+To save time and ensure reliability, companies automate the most repetitive and
+stable test cases. These usually include login/logout flows, form submissions,
+search functionality, or payment processing. Automation tools like Selenium, 
+PyTest, Cypress, or TestNG are used to write scripts that simulate user 
+behavior. These scripts can run automatically every time the code is updated,
+ensuring that no existing functionality is broken (regression testing).
+
+Test Cases Are Maintained in Test Management Tools
+Test cases — whether manual or automated — are usually managed using tools like
+TestRail, JIRA, Zephyr, or Excel. These platforms help teams organize, track, 
+and report test results. Each test case has a unique ID, title, test steps, 
+expected outcome, and current status. Automated scripts are often linked to 
+these tools for better visibility and traceability during the development 
+lifecycle.
+
+Execution Is Regular and Often Integrated with CI/CD
+Modern software companies integrate testing into their CI/CD
+(Continuous Integration/Continuous Deployment) pipelines. This means that test 
+suites (groups of test cases) run automatically every time developers push code. 
+Automated test cases give instant feedback on code quality. Manual test cases 
+are often executed before major releases or for features that require human 
+verification. This process ensures faster, safer deployments.
+
+-----------------------------------------------------------------------
+What is automation?
+Automation refers to the use of technology (software or hardware) to perform tasks without human 
+intervention.
+It involves designing systems or scripts that can replicate manual tasks efficiently, accurately,
+and repeatedly.
+------------------------------------------------------------
+Why was Automation made in the first place?
+
+Machines and software can execute tasks far faster than humans.
+Automation reduces task duration from hours to seconds.
+Many tasks are boring, repetitive (e.g., clicking buttons, running tests).
+Automation frees up human time for creative and analytical work.
+Humans are prone to errors (typos, missteps).
+Automation ensures the same result every time — ideal for testing and production systems.
+Reduces need for manual labor over time.
+Minimizes errors → saves cost of fixing mistakes.
+ML pipelines need automation for:
+Data collection
+Model training
+Evaluation
+Deployment
+--------------------------------------------------------------------------
+*What are frameworks?*
+an organized way of maintaining automation files
+in the framework all the files will communicate with eachother to perform a certain task
+
+Objectives:
+1)Reusability
+2)Maintainibility
+
+types
+-----
+1) Built in frameworks:
+    pytest, robotframework, unitest e.t.c 
+
+2)user defined frameworks:
+    keyword driven framework, Hybrid driven framework, Datdriven framework
+
+
+------------------------------------------------
+Phases:
+1) Analyze application, technology and skill set of team , choose test cases
+
+How to choose the right Test case:
+To choose the right test case for automation, focus on those that are repetitive, stable, and high-impact.
+Ideal candidates include login flows, form submissions, and regression or smoke tests—especially if they’re
+run frequently or across multiple environments. Tests that are time-consuming to executemanually,data-driven
+with multiple input sets, or critical to application functionality offer high return on automation.However,
+avoid automating unstable features, visual/UX tests, or flows with elements like CAPTCHA or OTP,as these 
+are better handled manually. The goal is to save time, ensure consistency, and increase test coverage where it matters most.
+
+->Retest Cases
+These are tests to verify that specific defects have been fixed. 
+Automating them ensures that fixes don’t break existing functionality and 
+saves manual effort every time you retest.
+
+->Regression Test Cases
+These tests check that recent code changes haven’t adversely affected existing
+features. Because regression tests need to be run frequently and cover many 
+parts of the application, automation is crucial for efficiency and speed.
+
+
+2)Design and implementation of framework
+3)execution
+4)Maintenance(version control system) 
+
+---------------------------------------------------
+Types of Test data:-
+
+->Static Test Data: Predefined, fixed data that remains constant across test runs. This data is often 
+stored in files like Excel, CSV, or databases, and is manually curated by testers.
+When you need reliable, predictable outcomes.
+Ideal for regression testing, repeated runs, and verifying known behavior.
+Useful in automated tests, where consistency is key.
+
+->Random Test Data(Also called Dynamic Test Data): Data that is generated at runtime, often randomly or dynamically using scripts, libraries, or tools like Faker.
+To simulate real-world variability in user inputs.
+When testing systems that should handle unpredictable or large volumes of data.
+Useful in stress testing, exploratory testing, or fuzz testing.
