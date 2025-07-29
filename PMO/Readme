@@ -1,1 +1,26 @@
 
+OrangeHRM Selenium Automation Framework (Python + Pytest)
+
+This project is a **modular web automation framework** using:
+
+-  Python + Selenium
+-  Page Object Model (POM) structure
+-  `pytest` test runner
+-  `pytest-html` for beautiful HTML reports
+
+It automates the login and logout functionality of [OrangeHRM](https://opensource-demo.orangehrmlive.com/) and serves as a solid starting point for larger test automation projects.
+
+---
+
+##  Project Structure
+
+WebScraping using selenium/
+├── chromedriver.exe # Chrome driver executable
+├── pages/ # Page Object Model classes
+│ ├── login_page.py # LoginPage class (enter username/password, click login)
+│ └── homepage.py # Homepage class (logout actions)
+├── tests/
+│ └── test_login.py # Test class using pytest
+
+Run with pytest:
+"pytest tests/test_login.py --html=reports/test_report.html --self-contained-html" for reports
